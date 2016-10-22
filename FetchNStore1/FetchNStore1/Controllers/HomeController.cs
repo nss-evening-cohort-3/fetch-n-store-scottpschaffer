@@ -26,5 +26,12 @@ namespace FetchNStore1.Controllers
 
             return View();
         }
+
+        public ActionResult FetchStore()
+        {
+            ViewBag.Message = "Your Fetching and Storing page.";
+
+            return View();
+        }
     }
 }
