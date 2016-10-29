@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace FetchNStore1.DAL
 {
-    public class FetchStoreContext
+    public class FetchStoreContext : DbContext
     {
         public virtual DbSet<Response> Responses { get; set; }
     }

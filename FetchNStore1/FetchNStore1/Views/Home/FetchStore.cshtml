@@ -13,7 +13,7 @@
 <div ng-controller="myController">
     <div class="row">
         <div>
-            <div class="col-md-offset-3 col-md-2">
+            <div class="col-lg-offset-3 col-lg-6">
                 <select name="singleMethod" id="singleMethod" ng-model="data.singleMethod">
                     <option value="GET">GET</option>
                     <option value="HEAD">HEAD</option>
@@ -21,10 +21,13 @@
                 </select>
                 <input type="url" name="inputURL" ng-model="data.theURL" />
                 <button ng-click="fetch()">Fetch</button>
+                <p>{{data}}</p>
+                <p>{{status}}</p>
+                <p>{{headers['content-type']}}</p>
             </div>
         </div>
     </div>
-    <div class="col-md-offset-8">
+    <div class="col-lg-offset-6">
         <button ng-click="store()">Store</button>
     </div>
     
