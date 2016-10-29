@@ -4,11 +4,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using FetchNStore1.Models;
+using FetchNStore1.DAL;
 
 namespace FetchNStore1.Controllers
 {
     public class ResponseController : ApiController
     {
+        private FetchStoreRepository repo = new FetchStoreRepository();
+
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
@@ -22,9 +26,9 @@ namespace FetchNStore1.Controllers
         }
 
         // POST api/<controller>
-        public string Post([FromBody]dynamic data)
+        public void Post([FromBody]Response data)
         {
-            return data.name.Value;
+            repo.AddResponse(data);
         }
 
         // PUT api/<controller>/5
